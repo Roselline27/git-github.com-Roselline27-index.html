@@ -1,0 +1,158 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Playlist</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Comic+Neue:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+      <!-- LEFT SIDE -->
+      <div class="left-side">
+        <h1>Playlist</h1>
+        <p>Songs that always remind me of you</p>
+      </div>
+      <!-- RIGHT SIDE -->
+      <div class="right-side">
+        <!-- Hidden radios -->
+        <input type="radio" name="slider" id="item-1" checked />
+        <input type="radio" name="slider" id="item-2" />
+        <input type="radio" name="slider" id="item-3" />
+        <input type="radio" name="slider" id="item-4" />
+        <input type="radio" name="slider" id="item-5" />
+
+        <!-- CARDS -->
+        <div class="cards">
+          <!-- Song 1: Seasons -->
+          <label class="card" for="item-1" id="song-1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJFaTy5f03RPIcvD6PoTdaVg49Fc4OpVqUGVI6v_e0bw&s=10" />
+          </label>
+          <!-- Song 2: My love mine all mine -->
+          <label class="card" for="item-2" id="song-2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4TU6rB-oy575D6uOT6K-0p96IjLIZmeWjrdhArDRnyg&s=10" alt="My love mine all mine" />
+          </label>
+          <!-- Song 3: About you -->
+          <label class="card" for="item-3" id="song-3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRcwGwBu74m_-wmGpbyX0tji6Maz4gbNwE9pKYG2A2nA&s=10" />
+          </label>
+          <!-- Song 4: Cry -->
+          <label class="card" for="item-4" id="song-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgxmgbIUC49x9N6Mnq0y5yNsKLqApb46tSz5SCv6gA1A&s=10" alt="Cry" />
+          </label>
+          <!-- Song 5: No. 1 party anthem -->
+          <label class="card" for="item-5" id="song-5">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO2YqVsntRsQ7YVxzD71ru1Vte9JYVHAW2bCj2x-n6DA&s=10" alt="No. 1 party anthem" />
+          </label>
+        </div>
+
+        <!-- PLAYER -->
+        <div class="player">
+          <!-- SONG INFO 1: Seasons -->
+          <div class="song-info active" id="song-info-1">
+            <div class="title">Seasons</div>
+            <div class="song-details">
+              <span class="artist">Wave to Earth</span>
+              <span class="duration">4:16</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <div class="time-indicator">
+              <span class="elapsed"></span>
+              <span class="remaining"></span>
+            </div>
+          </div>
+          <!-- SONG INFO 2: My love mine all mine -->
+          <div class="song-info" id="song-info-2">
+            <div class="title">My love mine all mine</div>
+            <div class="song-details">
+              <span class="artist">Mitsky</span>
+              <span class="duration">2:18</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <div class="time-indicator">
+              <span class="elapsed"></span>
+              <span class="remaining"></span>
+            </div>
+          </div>
+          <!-- SONG INFO 3: About you -->
+          <div class="song-info" id="song-info-3">
+            <div class="title">About you</div>
+            <div class="song-details">
+              <span class="artist">The 1975</span>
+              <span class="duration">5:26</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <div class="time-indicator">
+              <span class="elapsed"></span>
+              <span class="remaining"></span>
+            </div>
+          </div>
+          <!-- SONG INFO 4: Cry -->
+          <div class="song-info" id="song-info-4">
+            <div class="title">Cry</div>
+            <div class="song-details">
+              <span class="artist">Cigarettes after sex </span>
+              <span class="duration">4:17</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <div class="time-indicator">
+              <span class="elapsed"></span>
+              <span class="remaining"></span>
+            </div>
+          </div>
+          <!-- SONG INFO 5: No. 1 party anthem -->
+          <div class="song-info" id="song-info-5">
+            <div class="title">No. 1 party anthem</div>
+            <div class="song-details">
+              <span class="artist">Arctic Monkeys</span>
+              <span class="duration">4:03</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <div class="time-indicator">
+              <span class="elapsed"></span>
+              <span class="remaining"></span>
+            </div>
+          </div>
+
+          <!-- PLAYER CONTROLS -->
+          <div class="controls">
+            <button id="prev">◁</button>
+            <button id="pause">▐▐</button>
+            <button id="next">▷</button>
+          </div>
+          <!-- EXTRA CONTROLS: Favorite Button Only -->
+          <div class="extra-controls">
+            <button id="favorite" class="favorite-btn">♡</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL (Using the provided pop-up content) -->
+    <div class="modal-overlay" id="notificationModal">
+      <div class="modal-content" id="modalContent">
+        <h2>Someone sent you a playlist</h2>
+        <p>Dear, love. I made this specially for you, I hope you check this out.</p>
+        <button class="modal-close" onclick="closeModal()">Open Playlist</button>
+      </div>
+    </div>
+
+    <!-- Link to external JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
